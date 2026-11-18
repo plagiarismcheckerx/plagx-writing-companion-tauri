@@ -6,6 +6,8 @@ import { getItem, KEYS, openExternal, setItem } from "../lib/storage";
 // once its live URL is known (only if Galaxy Store rules allow linking to it).
 const PCX_URL = "https://plagiarismcheckerx.com";
 // PRIVACY.md in the public repo; update if the repo lives elsewhere.
+// App Store Guideline 3.1: no button to an outside site that sells subscriptions on iOS; keep the text only.
+const IS_IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
 const PRIVACY_URL = "https://github.com/plagiarismcheckerx/plagx-writing-companion-tauri/blob/main/PRIVACY.md";
 
 export function AboutScreen() {
@@ -42,7 +44,7 @@ export function AboutScreen() {
       <section className="card">
         <label className="label">More from Plagiarism Checker X</label>
         <p>For complete plagiarism detection and AI-content checks, see Plagiarism Checker X.</p>
-        <button className="btn ghost full" onClick={() => openExternal(PCX_URL)}><Icon name="external" size={18} />Learn more</button>
+        {!IS_IOS && <button className="btn ghost full" onClick={() => openExternal(PCX_URL)}><Icon name="external" size={18} />Learn more</button>}
       </section>
 
       <p className="hint center">

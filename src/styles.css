@@ -1,9 +1,9 @@
-/* Tokens copied from plagiarism-checker-x-tauri/src/styles/theme.css (PCX design system). */
+/* Tokens copied from plagiarism-checker-x-tauri/src/styles/theme.css (PCX design system); accent uses the PlagX icon blues. */
 :root,
 :root[data-theme="light"] {
-  --accent: #4f46e5;
-  --accent-50: #eef2ff;
-  --accent-100: #e0e7ff;
+  --accent: #27439b;
+  --accent-50: #e6edff;
+  --accent-100: #c9d7ff;
   --cta: #0f0e2c;
   --cta-hover: #1e1b4b;
   --ink: #0f172a;
@@ -25,7 +25,7 @@
   --radius-md: 8px;
   --radius-control: 6px;
   --f-plag: #dc2626;
-  --f-ai: #6366f1;
+  --f-ai: #3b63d9;
   --f-grammar: #2563eb;
   --f-read: #f59e0b;
   color-scheme: light;
@@ -33,11 +33,11 @@
 }
 
 :root[data-theme="dark"] {
-  --accent: #818cf8;
-  --accent-50: rgba(99, 102, 241, 0.16);
-  --accent-100: rgba(99, 102, 241, 0.32);
-  --cta: #4f46e5;
-  --cta-hover: #6366f1;
+  --accent: #79a1ff;
+  --accent-50: rgba(121, 161, 255, 0.16);
+  --accent-100: rgba(121, 161, 255, 0.32);
+  --cta: #3556c2;
+  --cta-hover: #4a6bd6;
   --ink: #f5f4ef;
   --ink-2: #c2c0b6;
   --ink-3: #acaaa2;
@@ -53,7 +53,7 @@
   --shadow-float: 0 12px 28px -6px #000a;
   --nav-bg: #1f1e1d;
   --f-plag: #ef4444;
-  --f-ai: #818cf8;
+  --f-ai: #79a1ff;
   --f-grammar: #3b82f6;
   --f-read: #f59e0b;
   color-scheme: dark;
@@ -257,3 +257,29 @@ p { margin: 0; }
 @keyframes toast-timer { to { transform: scaleX(0); } }
 .ico { flex: none; }
 .link { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; cursor: pointer; text-decoration: underline; }
+
+/* ---------- Desktop / tablet (≥900px): header across, tabs as a left sidebar, centred content ---------- */
+@media (min-width: 900px) {
+  .app {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 232px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "top top" "nav main";
+  }
+  .topbar { grid-area: top; padding: 14px 24px; }
+  .content { grid-area: main; padding: 28px 32px 40px; }
+  .content > * { max-width: 1100px; margin-left: 0; margin-right: auto; }
+  .tabbar {
+    grid-area: nav;
+    display: flex; flex-direction: column; gap: 4px;
+    padding: 16px 12px; border-top: 0; border-right: 1px solid var(--line);
+  }
+  .tabbar button {
+    flex-direction: row; justify-content: flex-start; gap: 12px;
+    padding: 10px 12px; border-radius: var(--radius-md); font-size: 14px;
+  }
+  .tabbar button:hover { background: var(--surface-hover); color: var(--ink); }
+  .tabbar button.on { background: var(--accent-50); color: var(--accent); }
+  .toasts { left: auto; right: 24px; transform: none; }
+}

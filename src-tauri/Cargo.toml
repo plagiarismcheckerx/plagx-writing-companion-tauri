@@ -1,0 +1,24 @@
+[package]
+name = "plagx-writing-companion"
+version = "1.0.0"
+description = "Plagx Writing Companion"
+authors = ["Plagiarism Checker X"]
+edition = "2024"
+
+[lib]
+# `_lib` suffix avoids a bin/lib name clash on Windows (cargo#8519)
+name = "plagx_companion_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

@@ -1,0 +1,21 @@
+Free academic writing tools by Plagiarism Checker X.
+
+<b>Cite</b>
+• Create references and in-text citations in APA, MLA, Chicago and Harvard
+• Journal articles, books and websites
+• Optional DOI lookup fills in the details for you (via the public Crossref service)
+
+<b>Preflight</b>
+• Grammar and punctuation suggestions: repeated words, capitalisation, spacing, unmatched brackets and quotes, common confusions
+• Style hints: long sentences, possible passive voice, filler words, contractions
+• Reference checks: citations missing from the reference list, references never cited, missing years, mixed formats, broken DOIs and URLs, duplicates and ordering
+• Tap a suggestion to find it in your text, and apply fixes in one tap
+
+<b>Notes</b>
+• Keep sources, quotes, page numbers and tags together
+• Search and export all your notes
+
+<b>Private by design</b>
+No account, no ads, no tracking. Everything runs and is stored on your device and works offline. The only network request is the optional DOI lookup.
+
+Preflight uses writing rules, not AI. This app does not check for plagiarism or AI-generated content.

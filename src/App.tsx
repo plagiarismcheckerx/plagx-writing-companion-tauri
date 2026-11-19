@@ -6,7 +6,8 @@ import { NotesScreen, type Note } from "./screens/Notes";
 import { AboutScreen } from "./screens/About";
 import { getItem, KEYS, setItem } from "./lib/storage";
 import { useToast } from "./components/Toast";
-import logo from "./assets/pcx-icon-128x128.png";
+import logo from "./assets/plagx-logo.png";
+import logoDark from "./assets/plagx-logo-dark.png";
 
 type Tab = "cite" | "preflight" | "notes" | "about";
 
@@ -36,9 +37,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <div className="brand" aria-label="PlagX">
-          <span className="brand-name" aria-hidden="true">Plag</span>
-          <img className="brand-mark" src={logo} alt="" aria-hidden="true" />
+        <div className="brand">
+          <img className="brand-logo light-only" src={logo} alt="PlagX Writing Companion" />
+          <img className="brand-logo dark-only" src={logoDark} alt="PlagX Writing Companion" />
         </div>
         <h1>{TABS.find((t) => t.id === tab)!.label}</h1>
       </header>

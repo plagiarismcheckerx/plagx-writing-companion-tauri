@@ -30,3 +30,7 @@ dist-ssr
 # Android build outputs (in case an APK/AAB is copied outside gen/android/app/build)
 *.apk
 *.aab
+
+# Built release files and build log
+release/
+build-android.log

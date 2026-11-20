@@ -1,4 +1,4 @@
-package com.plagiarismcheckerx.writingcompanion
+package com.plagx.writingcompanion
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
